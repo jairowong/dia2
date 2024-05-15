@@ -1,9 +1,7 @@
 package com.example.dia2;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,28 +9,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-    EditText t1;
-
+public class siguiente extends AppCompatActivity {
+    TextView tx2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_siguiente);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        t1=findViewById(R.id.tex);
-
-    }
-    public void obtener(View view){
-        String valor=t1.getText().toString();
-        Intent in=new Intent(this, siguiente.class);
-        in.putExtra("hola",valor);
-        startActivity(in);
-        finish();
+        tx2=findViewById(R.id.tx22);
+        String va=getIntent().getStringExtra("hola");
+        tx2.setText("me llamo "+va);
     }
 }
