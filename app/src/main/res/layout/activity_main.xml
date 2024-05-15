@@ -26,7 +26,9 @@
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Button"
+            />
+
 
         <EditText
             android:id="@+id/tex"
@@ -34,6 +36,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="tu nombre"
-            android:inputType="text" />
+            android:inputType="text"
+
+            />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
